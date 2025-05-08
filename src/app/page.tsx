@@ -118,9 +118,9 @@ export default function Home() {
             
             <div className="mt-8 relative overflow-hidden">
               <Marquee className="py-4 [--duration:40s] [--gap:2rem]" repeat={4}>
-                {/* Logos */}
-                {[...Array(10)].map((_, i) => (
-                  i % 5 === 0 ? (
+                {/* Alternating Jupiter logo and question marks */}
+                {[...Array(8)].map((_, i) => (
+                  i % 3 === 0 ? (
                     <div key={`logo-${i}`} className="mx-10 flex items-center justify-center h-16">
                       <img 
                         src="/jupiter-ag-jup-logo.png" 
