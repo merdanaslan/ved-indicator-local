@@ -64,6 +64,14 @@ export function Marquee({
               "group-hover:[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
             })}
+            style={{
+              animationDuration: "var(--duration)",
+              animationTimingFunction: "linear",
+              animationIterationCount: "infinite",
+              WebkitBackfaceVisibility: "hidden",
+              backfaceVisibility: "hidden",
+              willChange: "transform"
+            }}
           >
             {children}
           </div>

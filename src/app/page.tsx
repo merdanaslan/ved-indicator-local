@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle } from "lucide-react"
+import React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -110,31 +111,34 @@ export default function Home() {
         <section id="compatible-dexes" className="py-16 bg-background">
           <div className="container space-y-6">
             <div className="text-center space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Compatible DEXes</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Compatible Futures Exchanges</h2>
               <p className="text-lg text-muted-foreground">
                 We're starting with Jupiter Perps. More DEXes coming soon.
               </p>
             </div>
             
             <div className="mt-8 relative overflow-hidden">
-              <Marquee className="py-4 [--duration:40s] [--gap:2rem]" repeat={4}>
-                {/* Alternating Jupiter logo and question marks */}
-                {[...Array(8)].map((_, i) => (
-                  i % 3 === 0 ? (
-                    <div key={`logo-${i}`} className="mx-10 flex items-center justify-center h-16">
+              <Marquee className="py-4 [--duration:90s] [--gap:2.5rem]" repeat={8}>
+                {/* Create a consistent pattern - 1 Jupiter logo followed by 3 question marks */}
+                {[...Array(4)].map((_, groupIndex) => (
+                  <React.Fragment key={`group-${groupIndex}`}>
+                    {/* Jupiter Logo */}
+                    <div className="mx-8 flex items-center justify-center h-20">
                       <img 
                         src="/jupiter-ag-jup-logo.png" 
                         alt="Jupiter" 
                         className="h-12 w-auto"
                       />
                     </div>
-                  ) : (
-                    <div key={`question-${i}`} className="mx-10 flex items-center justify-center h-16">
-                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-muted/70">
-                        <HelpCircle className="h-7 w-7 text-muted-foreground/70" />
+                    {/* Three Question Marks */}
+                    {[...Array(3)].map((_, i) => (
+                      <div key={`qmark-${groupIndex}-${i}`} className="mx-8 flex items-center justify-center h-20">
+                        <div className="flex items-center justify-center h-12 w-12 rounded-full bg-muted/70">
+                          <HelpCircle className="h-7 w-7 text-muted-foreground/70" />
+                        </div>
                       </div>
-                    </div>
-                  )
+                    ))}
+                  </React.Fragment>
                 ))}
               </Marquee>
               {/* Add gradient fade effect on edges */}
