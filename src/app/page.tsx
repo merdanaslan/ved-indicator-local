@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle } from "lucide-react"
+import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle, ArrowDownToLine, Clock, LayoutDashboard } from "lucide-react"
 import React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -20,8 +20,8 @@ export default function Home() {
             <Link href="#features" className="transition-colors hover:text-primary">
               Features
             </Link>
-            <Link href="#markets" className="transition-colors hover:text-primary">
-              Markets
+            <Link href="#compatible-dexes" className="transition-colors hover:text-primary">
+              DEXes
             </Link>
             <Link href="#demo" className="transition-colors hover:text-primary">
               Demo
@@ -148,36 +148,54 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="markets" className="bg-muted/50 py-24">
-          <div className="container space-y-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
-              Markets We Cover
-            </h2>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+        <section id="features" className="bg-muted/50 py-16">
+          <div className="container space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Trade Smarter, Trade Better
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                More features are rolled out regularly — so you're always ahead of the curve.
+              </p>
+            </div>
+            
+            <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 md:grid-cols-2">
               <Card>
                 <CardContent className="p-6 space-y-2">
-                  <BarChart2 className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Perpetual Futures</h3>
+                  <ArrowDownToLine className="h-12 w-12 text-primary" />
+                  <h3 className="text-xl font-bold">Automatic Trade Import</h3>
                   <p className="text-sm text-muted-foreground">
-                    Track and analyze your perpetual futures trades with precision on leading DEX platforms.
+                    Enter your wallet and automatically import all your trades from supported DEXes. No manual entry required.
                   </p>
                 </CardContent>
               </Card>
+              
               <Card>
                 <CardContent className="p-6 space-y-2">
                   <LineChart className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Spot Trading</h3>
+                  <h3 className="text-xl font-bold">Advanced Analytics</h3>
                   <p className="text-sm text-muted-foreground">
-                    Comprehensive tracking and analysis for all your spot trading activity on decentralized exchanges.
+                    Gain insights with detailed performance metrics, profit/loss analysis, and trading patterns visualization.
                   </p>
                 </CardContent>
               </Card>
+              
               <Card>
                 <CardContent className="p-6 space-y-2">
-                  <Globe2 className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Multi-Chain Support</h3>
+                  <Clock className="h-12 w-12 text-primary" />
+                  <h3 className="text-xl font-bold">Trade History Timeline</h3>
                   <p className="text-sm text-muted-foreground">
-                    Seamlessly track trades across multiple blockchains, including Solana, Ethereum, and more.
+                    View your complete trading history with detailed information on each transaction in a chronological timeline.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardContent className="p-6 space-y-2">
+                  <LayoutDashboard className="h-12 w-12 text-primary" />
+                  <h3 className="text-xl font-bold">DEX-First by Design</h3>
+                  <p className="text-sm text-muted-foreground">
+                    GoldenPocket is built with a DEX-first architecture — fully optimized for decentralized trading workflows.
                   </p>
                 </CardContent>
               </Card>
@@ -185,11 +203,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="demo" className="py-24">
+        <section id="demo" className="py-16">
           <div className="container space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">See It In Action</h2>
-              <p className="text-xl text-muted-foreground max-w-[42rem] mx-auto">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">See It In Action</h2>
+              <p className="text-lg text-muted-foreground">
                 Watch how Golden Pocket automatically tracks and analyzes your DEX trading activity in real-time.
               </p>
             </div>
