@@ -50,7 +50,7 @@ export default function Home() {
                       <WordRotate 
                         className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
                         words={["Track", "Analyze", "Improve"]} 
-                        duration={3000}
+                        duration={2000}
                       />
                     </div>
                     <div>Your Trading</div>
