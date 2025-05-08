@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle, ArrowDownToLine, Clock, LayoutDashboard } from "lucide-react"
+import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle, ArrowDownToLine, Clock, LayoutDashboard, User, Link2, PenTool } from "lucide-react"
 import React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -23,8 +23,8 @@ export default function Home() {
             <Link href="#compatible-dexes" className="transition-colors hover:text-primary">
               DEXes
             </Link>
-            <Link href="#demo" className="transition-colors hover:text-primary">
-              Demo
+            <Link href="#get-started" className="transition-colors hover:text-primary">
+              Get Started
             </Link>
             <Link href="#pricing" className="transition-colors hover:text-primary">
               Pricing
@@ -203,28 +203,49 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="demo" className="py-16">
-          <div className="container space-y-12">
+        <section id="get-started" className="py-16 bg-background">
+          <div className="container space-y-8">
             <div className="text-center space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">See It In Action</h2>
-              <p className="text-lg text-muted-foreground">
-                Watch how Golden Pocket automatically tracks and analyzes your DEX trading activity in real-time.
-              </p>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get Started In Just A Few Minutes</h2>
             </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="relative aspect-video rounded-xl overflow-hidden">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="Golden Pocket Demo"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+            
+            <div className="mt-12 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                {/* Step 1 */}
+                <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                  <div className="flex items-center justify-center">
+                    <User className="h-20 w-20 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-bold">Create an account</h3>
+                </div>
+                
+                {/* Horizontal line 1 - between account and exchange */}
+                <div className="absolute hidden md:block h-[1px] bg-gray-200 top-10 left-[26%] w-[15%]"></div>
+                
+                {/* Step 2 */}
+                <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                  <div className="flex items-center justify-center">
+                    <Link2 className="h-20 w-20 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-bold">Link your exchanges</h3>
+                </div>
+                
+                {/* Horizontal line 2 - between exchange and tracking */}
+                <div className="absolute hidden md:block h-[1px] bg-gray-200 top-10 right-[26%] w-[15%]"></div>
+                
+                {/* Step 3 */}
+                <div className="flex flex-col items-center text-center space-y-4 relative z-10">
+                  <div className="flex items-center justify-center">
+                    <PenTool className="h-20 w-20 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-xl font-bold">Start tracking</h3>
+                </div>
               </div>
             </div>
-            <div className="text-center">
-              <Button size="lg" className="gap-2">
-                <Play className="w-4 h-4" /> Get Started For Free
+            
+            <div className="text-center mt-12">
+              <Button size="lg" className="px-8 text-base font-medium bg-primary hover:bg-primary/90">
+                Get Started for Free
               </Button>
             </div>
           </div>
