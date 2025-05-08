@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { ArrowRight, BarChart2, Globe2, LineChart, Play } from "lucide-react"
+import { ArrowRight, BarChart2, Globe2, LineChart, Play, HelpCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { WordRotate } from "@/components/magicui/word-rotate"
+import { Marquee } from "@/components/magicui/marquee"
 
 export default function Home() {
   return (
@@ -45,10 +46,14 @@ export default function Home() {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                    <WordRotate 
-                      className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
-                      words={["Track", "Analyze", "Improve"]} 
-                    /> Your Trading{" "}
+                    <div>
+                      <WordRotate 
+                        className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+                        words={["Track", "Analyze", "Improve"]} 
+                        duration={3000}
+                      />
+                    </div>
+                    <div>Your Trading</div>
                     <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
                       Performance
                     </span>
@@ -102,6 +107,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="compatible-dexes" className="py-16 bg-muted/30">
+          <div className="container space-y-6">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Compatible DEXes</h2>
+              <p className="text-lg text-muted-foreground">
+                We're starting with Jupiter Perps. More DEXes coming soon.
+              </p>
+            </div>
+            
+            <div className="mt-8 relative overflow-hidden">
+              <Marquee className="py-4 [--duration:20s]" pauseOnHover>
+                {/* Jupiter Logo */}
+                <div className="mx-10 flex items-center justify-center h-16">
+                  <img 
+                    src="/jupiter-ag-jup-logo.png" 
+                    alt="Jupiter" 
+                    className="h-7 w-auto max-w-[100px] object-contain"
+                  />
+                </div>
+                {/* Question Mark Icons */}
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <div key={i} className="mx-10 flex items-center justify-center h-16">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-muted/70">
+                      <HelpCircle className="h-8 w-8 text-muted-foreground/70" />
+                    </div>
+                  </div>
+                ))}
+              </Marquee>
+              {/* Add gradient fade effect on edges */}
+              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10"></div>
+              <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10"></div>
+            </div>
+          </div>
+        </section>
+
         <section id="markets" className="bg-muted/50 py-24">
           <div className="container space-y-12">
             <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
@@ -111,27 +151,27 @@ export default function Home() {
               <Card>
                 <CardContent className="p-6 space-y-2">
                   <BarChart2 className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Forex Markets</h3>
+                  <h3 className="text-xl font-bold">Perpetual Futures</h3>
                   <p className="text-sm text-muted-foreground">
-                    Trade major, minor, and exotic currency pairs with confidence using our precise signals.
+                    Track and analyze your perpetual futures trades with precision on leading DEX platforms.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 space-y-2">
                   <LineChart className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Indian Markets</h3>
+                  <h3 className="text-xl font-bold">Spot Trading</h3>
                   <p className="text-sm text-muted-foreground">
-                    Get accurate signals for Nifty, Bank Nifty, and other Indian market instruments.
+                    Comprehensive tracking and analysis for all your spot trading activity on decentralized exchanges.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="p-6 space-y-2">
                   <Globe2 className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Global Markets</h3>
+                  <h3 className="text-xl font-bold">Multi-Chain Support</h3>
                   <p className="text-sm text-muted-foreground">
-                    Access signals for commodities, indices, and cryptocurrency markets worldwide.
+                    Seamlessly track trades across multiple blockchains, including Solana, Ethereum, and more.
                   </p>
                 </CardContent>
               </Card>
@@ -144,7 +184,7 @@ export default function Home() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">See It In Action</h2>
               <p className="text-xl text-muted-foreground max-w-[42rem] mx-auto">
-                Watch how the Ved Indicator provides precise trading signals in real-time market conditions.
+                Watch how Golden Pocket automatically tracks and analyzes your DEX trading activity in real-time.
               </p>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -160,7 +200,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button size="lg" className="gap-2">
-                <Play className="w-4 h-4" /> Start Your Free Trial
+                <Play className="w-4 h-4" /> Get Started For Free
               </Button>
             </div>
           </div>
