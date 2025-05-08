@@ -27,7 +27,10 @@ export default function Home() {
               Pricing
             </Link>
           </nav>
-          <Button>Get Started</Button>
+          <div className="flex items-center space-x-4">
+            <Button variant="outline" className="text-sm font-medium">Login</Button>
+            <Button className="text-sm font-medium">Get Started</Button>
+          </div>
         </div>
       </header>
       <main className="flex-1">
@@ -47,30 +50,29 @@ export default function Home() {
                     </span>
                   </h1>
                   <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                    Achieve precision and confidence in your trades with our advanced technical indicator. Experience up
-                    to 95% accuracy across multiple markets.
+                    A fully-automated trading journal built for DEX traders — no spreadsheets, no manual logging.
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="gap-2">
-                    Start Trading <ArrowRight className="h-4 w-4" />
+                    Get Started <ArrowRight className="h-4 w-4" />
                   </Button>
-                  <Button size="lg" variant="outline">
-                    View Demo
+                  <Button size="lg" variant="outline" className="gap-2">
+                    Login
                   </Button>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8">
                   <div className="space-y-2">
-                    <h4 className="text-4xl font-bold text-primary">95%</h4>
-                    <p className="text-sm text-muted-foreground">Accuracy Rate</p>
+                    <h4 className="text-4xl font-bold text-primary">Free</h4>
+                    <p className="text-sm text-muted-foreground">To Start</p>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-4xl font-bold text-primary">24/7</h4>
-                    <p className="text-sm text-muted-foreground">Market Coverage</p>
+                    <h4 className="text-4xl font-bold text-primary">100%</h4>
+                    <p className="text-sm text-muted-foreground">Automated</p>
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-4xl font-bold text-primary">10k+</h4>
-                    <p className="text-sm text-muted-foreground">Active Traders</p>
+                    <h4 className="text-4xl font-bold text-primary">10+</h4>
+                    <p className="text-sm text-muted-foreground">Growing Analytics</p>
                   </div>
                 </div>
               </div>
@@ -78,15 +80,6 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl blur-3xl" />
                 <div className="relative bg-card rounded-2xl border p-6 shadow-2xl">
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="space-y-1">
-                        <h3 className="font-semibold">Golden Pocket Signal</h3>
-                        <p className="text-sm text-muted-foreground">Real-time market analysis</p>
-                      </div>
-                      <Button variant="outline" size="sm">
-                        Live Demo
-                      </Button>
-                    </div>
                     <div className="aspect-[4/3] rounded-lg bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 flex items-center justify-center">
                       <BarChart2 className="h-24 w-24 text-primary/40" />
                     </div>
