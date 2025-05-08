@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="compatible-dexes" className="py-16 bg-muted/30">
+        <section id="compatible-dexes" className="py-16 bg-background">
           <div className="container space-y-6">
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Compatible DEXes</h2>
@@ -117,22 +117,24 @@ export default function Home() {
             </div>
             
             <div className="mt-8 relative overflow-hidden">
-              <Marquee className="py-4 [--duration:20s]" pauseOnHover>
-                {/* Jupiter Logo */}
-                <div className="mx-10 flex items-center justify-center h-16">
-                  <img 
-                    src="/jupiter-ag-jup-logo.png" 
-                    alt="Jupiter" 
-                    className="h-7 w-auto max-w-[100px] object-contain"
-                  />
-                </div>
-                {/* Question Mark Icons */}
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <div key={i} className="mx-10 flex items-center justify-center h-16">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-muted/70">
-                      <HelpCircle className="h-8 w-8 text-muted-foreground/70" />
+              <Marquee className="py-4 [--duration:40s] [--gap:2rem]" repeat={4}>
+                {/* Logos */}
+                {[...Array(10)].map((_, i) => (
+                  i % 5 === 0 ? (
+                    <div key={`logo-${i}`} className="mx-10 flex items-center justify-center h-16">
+                      <img 
+                        src="/jupiter-ag-jup-logo.png" 
+                        alt="Jupiter" 
+                        className="h-12 w-auto"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div key={`question-${i}`} className="mx-10 flex items-center justify-center h-16">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-muted/70">
+                        <HelpCircle className="h-7 w-7 text-muted-foreground/70" />
+                      </div>
+                    </div>
+                  )
                 ))}
               </Marquee>
               {/* Add gradient fade effect on edges */}
