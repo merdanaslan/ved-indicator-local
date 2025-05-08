@@ -3,6 +3,7 @@ import { ArrowRight, BarChart2, Globe2, LineChart, Play } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { WordRotate } from "@/components/magicui/word-rotate"
 
 export default function Home() {
   return (
@@ -44,7 +45,10 @@ export default function Home() {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                    Track, Analyze And Improve Your Trading{" "}
+                    <WordRotate 
+                      className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+                      words={["Track", "Analyze", "Improve"]} 
+                    /> Your Trading{" "}
                     <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
                       Performance
                     </span>
