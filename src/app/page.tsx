@@ -18,17 +18,17 @@ export default function Home() {
             <span className="text-xl font-bold">Golden Pocket</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <Link href="#features" className="transition-colors hover:text-primary">
-              Features
-            </Link>
             <Link href="#compatible-dexes" className="transition-colors hover:text-primary">
               DEXes
+            </Link>
+            <Link href="#features" className="transition-colors hover:text-primary">
+              Features
             </Link>
             <Link href="#get-started" className="transition-colors hover:text-primary">
               Get Started
             </Link>
-            <Link href="#pricing" className="transition-colors hover:text-primary">
-              Pricing
+            <Link href="#faq" className="transition-colors hover:text-primary">
+              FAQ
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
