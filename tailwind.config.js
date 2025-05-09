@@ -20,6 +20,7 @@ module.exports = {
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        "shimmer-slide": "shimmer-slide var(--shimmer-duration) ease-out infinite",
       },
       keyframes: {
         marquee: {
@@ -29,6 +30,11 @@ module.exports = {
         "marquee-vertical": {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        "shimmer-slide": {
+          "0%": { transform: "translateX(-100%)", opacity: 0 },
+          "50%": { opacity: 0.5 },
+          "100%": { transform: "translateX(100%)", opacity: 0 },
         },
       },
       colors: {

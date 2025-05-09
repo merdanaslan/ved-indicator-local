@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { WordRotate } from "@/components/magicui/word-rotate"
 import { Marquee } from "@/components/magicui/marquee"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { ShimmerButton } from "@/components/magicui/shimmer-button"
 
 export default function Home() {
   return (
@@ -319,9 +320,14 @@ export default function Home() {
             </div>
             
             <div>
-              <Button size="lg" className="px-12 py-6 text-lg font-medium bg-primary hover:bg-primary/90">
+              <ShimmerButton 
+                size="lg" 
+                className="px-12 py-6 text-lg font-medium bg-primary hover:bg-primary/90"
+                shimmerColor="rgba(255, 255, 255, 0.4)"
+                shimmerDuration="2s"
+              >
                 Get Started
-              </Button>
+              </ShimmerButton>
             </div>
           </div>
         </section>
