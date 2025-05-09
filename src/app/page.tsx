@@ -75,7 +75,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8">
                   <div className="space-y-2">
                     <h4 className="text-4xl font-bold text-primary">Free</h4>
-                    <p className="text-sm text-muted-foreground">To Start</p>
+                    <p className="text-sm text-muted-foreground">Start Instantly</p>
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-4xl font-bold text-primary">100%</h4>
@@ -163,20 +163,20 @@ export default function Home() {
             <div className="mx-auto max-w-5xl grid grid-cols-1 gap-6 md:grid-cols-2">
               <Card>
                 <CardContent className="p-6 space-y-2">
-                  <ArrowDownToLine className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Automatic Trade Import</h3>
+                  <LineChart className="h-12 w-12 text-primary" />
+                  <h3 className="text-xl font-bold">Advanced Analytics</h3>
                   <p className="text-sm text-muted-foreground">
-                    Enter your wallet and automatically import all your trades from supported DEXes. No manual entry required.
+                    Gain insights with detailed performance metrics, profit/loss analysis, and trading patterns visualization.
                   </p>
                 </CardContent>
               </Card>
               
               <Card>
                 <CardContent className="p-6 space-y-2">
-                  <LineChart className="h-12 w-12 text-primary" />
-                  <h3 className="text-xl font-bold">Advanced Analytics</h3>
+                  <ArrowDownToLine className="h-12 w-12 text-primary" />
+                  <h3 className="text-xl font-bold">Automatic Trade Import</h3>
                   <p className="text-sm text-muted-foreground">
-                    Gain insights with detailed performance metrics, profit/loss analysis, and trading patterns visualization.
+                    Enter your wallet and automatically import all your trades from supported DEXes. No manual entry required.
                   </p>
                 </CardContent>
               </Card>
