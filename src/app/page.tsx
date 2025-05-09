@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { WordRotate } from "@/components/magicui/word-rotate"
 import { Marquee } from "@/components/magicui/marquee"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Home() {
   return (
@@ -250,10 +251,67 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="faq" className="py-16 bg-background">
+          <div className="container space-y-8">
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">FAQ</h2>
+            </div>
+            
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="text-xl font-medium">
+                    Is GoldenPocket free to use?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes!
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="text-xl font-medium">
+                    Which exchanges are supported?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    We currently support Jupiter Perpetuals. More integrations are on the way.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-3">
+                  <AccordionTrigger className="text-xl font-medium">
+                    Can I connect more than one wallet?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    We currently support one wallet connection at a time. Multi-wallet support is planned for a future release.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-4">
+                  <AccordionTrigger className="text-xl font-medium">
+                    How does GoldenPocket sync my trades?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    GoldenPocket combines onchain data parsing with exchange API integrations to accurately detect, match, and sync your trading history — no manual input required.
+                  </AccordionContent>
+                </AccordionItem>
+                
+                <AccordionItem value="item-5">
+                  <AccordionTrigger className="text-xl font-medium">
+                    How far back can you import my trading history?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Currently, GoldenPocket syncs trade data starting from January 1st, 2025. We're working on extending this window in future versions.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </section>
       </main>
       <footer className="border-t py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-muted-foreground">© 2024 Golden Pocket. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© 2025 Golden Pocket. All rights reserved.</p>
           <div className="flex items-center space-x-4">
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
               Terms
