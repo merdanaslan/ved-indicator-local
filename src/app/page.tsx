@@ -319,7 +319,7 @@ export default function Home() {
             </div>
             
             <div>
-              <Button size="lg" className="px-8 py-6 text-lg font-medium">
+              <Button size="lg" className="px-12 py-6 text-lg font-medium bg-primary hover:bg-primary/90">
                 Get Started
               </Button>
             </div>
