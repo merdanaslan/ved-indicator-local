@@ -66,9 +66,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="gap-2">
-                    Get Started <ArrowRight className="h-4 w-4" />
-                  </Button>
+                  <ShimmerButton 
+                    size="lg" 
+                    className="gap-2"
+                    shimmerColor="rgba(255, 255, 255, 0.4)"
+                    shimmerDuration="2s"
+                  >
+                    Get Started 
+                  </ShimmerButton>
                   <Button size="lg" variant="outline" className="gap-2">
                     Login
                   </Button>
