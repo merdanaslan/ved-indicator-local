@@ -308,6 +308,23 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="cta" className="py-24 bg-muted/50">
+          <div className="container max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Become The Trader You Always Wanted To Be</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Trade with clarity, consistency, and confidence.
+              </p>
+            </div>
+            
+            <div>
+              <Button size="lg" className="px-8 py-6 text-lg font-medium">
+                Get Started
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
       <footer className="border-t py-8">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
